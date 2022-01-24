@@ -29,8 +29,6 @@ function Filtro() {
     setScrollPos([scrollPos[1], winScroll]);
   };
 
-  console.log(scrollPos);
-
   return (
     <div className="container-fluid p-1">
       {isOpen && (
