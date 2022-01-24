@@ -6,7 +6,6 @@ import HomePage from "./views/HomePage";
 import PerfilPage from "./views/PerfilPage";
 import ObrasPage from "./views/Obras/ObrasPage";
 import ArtistaPage from "./views/ArtistaPage";
-import ListaArtistasPage from "./views/ListaArtistasPage";
 import SobrePage from "./views/SobrePage";
 
 const routes = [

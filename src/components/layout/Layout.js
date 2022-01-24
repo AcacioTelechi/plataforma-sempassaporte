@@ -1,6 +1,5 @@
 import React from "react";
 
-import Bubble from "../bubble/Bubble";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 
