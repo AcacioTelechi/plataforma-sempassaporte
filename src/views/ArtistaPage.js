@@ -68,7 +68,7 @@ function ArtistaPage() {
         </ul>
         <h1> Sobre </h1>
         <p>{sobre}</p>
-        <h1> Poetica </h1>
+        <h1> Poética </h1>
         <p>{poetica}</p>
         <h1> Obras </h1>
         {!isObrasLoaded ? (
