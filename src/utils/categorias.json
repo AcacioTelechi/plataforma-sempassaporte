@@ -1,0 +1,30 @@
+[{"id": "c001",
+  "nome": "Pintura",
+  "descricao": "Pintura",
+  "subcategorias": ["Em tela", "Em madeira", "Em papel"] 
+},
+{
+  "id": "c002",
+  "nome": "Gravuras",
+  "descricao": "Gravuras",
+  "subcategorias": ["Xilogravura", "Litogravura", "Gravura em metal", "Serigrafia", "Fotogravura"]
+},
+{
+  "id": "c003",
+  "nome": "Escultura",
+  "descricao": "Escultura",
+  "subcategorias": ["Arte de madeira", "Arte de tela", "Arte de papel", "Arte de metal"]
+},
+{
+  "id": "c004",
+  "nome": "Fotografia",
+  "descricao": "Fotografia",
+  "subcategorias": ["Fotografia de tela", "Fotografia de papel", "Fotografia de madeira", "Fotografia de metal"]
+},
+{
+  "id": "c999",
+  "nome": "Outros",
+  "descricao": "Outros",
+  "subcategorias": []
+}
+]

@@ -1,0 +1,57 @@
+$font-stack: "Roboto", sans-serif;
+
+$speed: 500ms;
+$border-radius: 16px;
+
+$header-height: 80px;
+
+$sidebar-width: 250px;
+$sidebar-width-toggled: 50px;
+
+$color-primary: rgb(250, 201, 156);
+$color-secondary: rgba(5, 127, 197, 0.699);
+$color-success: #4caf50;
+$color-red: #f44336;
+$color-warning: #ff9800;
+$color-info: #2196f3;
+$color-light: #fafafa;
+$color-dark: #333;
+
+
+// definir cor do texto com base na cor do fundo
+@function set-text-color($color) {
+  @if(lightness($color) > 70) {
+    @return $color-dark;
+  } @else {
+    @return $color-light;
+  }
+};
+
+// definir cor de fundo e letra
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+// margens e paddings
+$spaceamounts: (1,2,3,4,5);
+
+@each $space in $spaceamounts {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    };
+    .my-#{$space} {
+        margin-top: #{$space}rem;
+        margin-bottom: #{$space}rem 0;
+    };
+    .p-#{$space} {
+        padding: #{$space}rem;
+    };
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    };
+
+    .px-#{$space} {
+        padding: 0 #{$space}rem;
+    };
+}

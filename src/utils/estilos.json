@@ -1,0 +1,8 @@
+[
+  { "id": "e001", "nome": "Abstrato" },
+  { "id": "e002", "nome": "Botânico" },
+  { "id": "e003", "nome": "Minimalista" },
+  { "id": "e004", "nome": "Geométrico" },
+  { "id": "e005", "nome": "Urbano" },
+  {"id": "e006", "nome": "Surrealista"}
+]

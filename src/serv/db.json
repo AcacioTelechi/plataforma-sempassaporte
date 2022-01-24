@@ -1,0 +1,162 @@
+{
+  "artistas": [
+    {
+      "id": "1000001",
+      "perfil": "a",
+      "nome": "Tarsila",
+      "sobrenome": "do Amaral",
+      "dataNascimento": "01/01/2000",
+      "nacionalidade": "BRA",
+      "estado": "SP",
+      "dadosPessoais": {
+        "cpf": "123.456.789-00",
+        "sexo": "F",
+        "naturalidade": "Capivari",
+        "email": "lorem@ipsum.com",
+        "telefone": "11-99999-9999",
+        "endereco": "Rua Lorem Ipsum, 123",
+        "complemento": "Apto. 123",
+        "bairro": "Bairro Lorem Ipsum",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "01234567"
+      },
+      "dadosProfissionais": {
+        "sobre": "Foi uma pintora, desenhista e tradutora brasileira e uma das figuras centrais da pintura e da primeira fase do movimento modernista no Brasil, ao lado de Anita Malfatti. Seu quadro Abaporu, de 1928, inaugurou o movimento antropofágico nas artes plásticas.[4]",
+        "poetica": "Lorem Ipsum",
+        "estilos": ["Estilo A", "Estilo B", "Estilo C"]
+      },
+      "dadosPlataforma": {
+        "curtidas": "0",
+        "seguidores": "0",
+        "popularidade": "0",
+        "obras": "0"
+      }
+    },
+    {
+      "id": "1000002",
+      "perfil": "a",
+      "nome": "Maria",
+      "sobrenome": "Xiquinha",
+      "dataNascimento": "01/01/2000",
+      "nacionalidade": "BRA",
+      "estado": "PR",
+      "dadosPessoais": {
+        "cpf": "123.456.789-00",
+        "sexo": "F",
+        "naturalidade": "Paraná",
+        "email": "lorem@ipsum.com",
+        "telefone": "11-99999-9999",
+        "endereco": "Rua Lorem Ipsum, 123",
+        "complemento": "Apto. 123",
+        "bairro": "Bairro Lorem Ipsum",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "cep": "01234567"
+      },
+      "dadosProfissionais": {
+        "sobre": "Lorem Ipsum",
+        "poetica": "Lorem Ipsum",
+        "estilos": ["Estilo A", "Estilo B", "Estilo C"]
+      },
+      "dadosPlataforma": {
+        "curtidas": "0",
+        "seguidores": "0",
+        "popularidade": "0",
+        "obras": "0"
+      }
+    }
+  ],
+  "obras": [
+    {
+      "id": "o0000001",
+      "autorId": "1000001",
+      "titulo": "Titulo de la publicacion",
+      "descricao": "Descripcion de la publicacion",
+      "tamanhoX": "100",
+      "tamanhoY": "100",
+      "estilos": ["e001", "e002"],
+      "categorias": "c001",
+      "curtidas": "0",
+      "img": "https://i1.wp.com/arteref.com/wp-content/uploads/2019/09/antropofagia.jpg?fit=900%2C700&ssl=1"
+    },
+    {
+      "id": "o0000002",
+      "autorId": "1000002",
+      "titulo": "Titulo de la publicacion",
+      "descricao": "Descripcion de la publicacion",
+      "tamanhoX": "100",
+      "tamanhoY": "100",
+      "estilos": ["e001", "e002"],
+      "categorias": "c001",
+      "curtidas": "0",
+      "img": "https://exame.com/wp-content/uploads/2019/05/operc3a1rios.jpg?quality=70&strip=info&resize=680,453"
+    },
+    {
+      "id": "o0000003",
+      "autorId": "1000002",
+      "titulo": "Titulo de la publicacion",
+      "descricao": "Descripcion de la publicacion",
+      "tamanhoX": "100",
+      "tamanhoY": "100",
+      "estilos": ["e001", "e002"],
+      "categorias": "c001",
+      "curtidas": "0",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Suprematist_Composition_-_Kazimir_Malevich.jpg/800px-Suprematist_Composition_-_Kazimir_Malevich.jpg"
+    },
+    {
+      "id": "o0000004",
+      "autorId": "1000002",
+      "titulo": "Titulo de la publicacion",
+      "descricao": "Descripcion de la publicacion",
+      "tamanhoX": "100",
+      "tamanhoY": "100",
+      "estilos": ["e001", "e002"],
+      "categorias": "c001",
+      "curtidas": "0",
+      "img": "https://riohilo.files.wordpress.com/2013/03/mc3a1rcia-x-e-adriana-varejc3a3o-075.jpg?w=1400&h=400&crop=1"
+    },
+    {
+      "id": "o0000005",
+      "autorId": "1000001",
+      "titulo": "Titulo de la publicacion",
+      "descricao": "Descripcion de la publicacion",
+      "tamanhoX": "100",
+      "tamanhoY": "100",
+      "estilos": ["e001", "e002"],
+      "categorias": "c001",
+      "curtidas": "0",
+      "img": "https://www.moma.org/d/assets/W1siZiIsIjIwMTgvMDEvMTYvMzEzbHZzajdjMV8xLnRhcnNpbGFfYWJhcG9ydS5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/1.tarsila_abaporu.jpg?sha=c1210c4e156ab2e6"
+    }
+  ],
+  "usuarios": [
+    {
+        "id": "2000001",
+        "perfil": {
+            "id": 2,
+            "nome": "Cliente"
+        },
+        "dadosPessoais": {
+            "nome": "João",
+            "sobrenome": "Silva",
+            "cpf": "123.456.789-00",
+            "dataNascimento": "01/01/2000",
+            "sexo": "Masculino",
+            "nacionalidade": "Brasileiro",
+            "naturalidade": "São Paulo",
+            "email": "lorem@ipsum.com",
+            "telefone": "11-99999-9999",
+            "endereco": "Rua Lorem Ipsum, 123",
+            "complemento": "Apto. 123",
+            "bairro": "Bairro Lorem Ipsum",
+            "cidade": "São Paulo",
+            "estado": "SP",
+            "cep": "01234567"
+        },
+        "dadosG": {
+            "estilos": ["Rock", "Pop", "Funk"],
+            "tipos": ["Guitarra", "Baixo", "Bateria"]
+        }
+    }
+  ]
+}
