@@ -16,9 +16,6 @@ function Header() {
           <Bubble />
         </div>
         <div className="App-header-btns">
-          <button className="btn-entrar">
-            <Link to="/artista/1000001">teste artista</Link>
-          </button>
           <button className="btn-entrar">Entrar</button>
           <button className="btn-criarConta">Criar conta</button>
         </div>

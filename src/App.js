@@ -13,7 +13,7 @@ const routes = [
   { path: "/", element: <HomePage />, access: "public" },
   { path: "/perfil", element: <PerfilPage />, access: "public" },
   { path: "/obras", element: <ObrasPage />, access: "public" },
-  { path: "/obras/:id", element: <ObraPage />, access: "public" },
+  { path: "/obra/:id", element: <ObraPage />, access: "public" },
   { path: "/artista/:id", element: <ArtistaPage />, access: "public" },
   { path: "/sobre", element: <SobrePage />, access: "public" },
 ];
