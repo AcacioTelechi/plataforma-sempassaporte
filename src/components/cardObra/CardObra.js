@@ -64,13 +64,13 @@ function CardObra(props) {
   }
 
   return (
-    <Link to={`/obra/${id}`}>
-      <div
-        style={{
-          ...styles.card,
-          ...styles[imgSize],
-        }}
-      >
+    <div
+      style={{
+        ...styles.card,
+        ...styles[imgSize],
+      }}
+    >
+      <Link to={`/obra/${id}`}>
         <img
           src={imgUrl}
           alt={props.nome}
@@ -78,8 +78,8 @@ function CardObra(props) {
           onMouseEnter={mouseHover}
           onMouseOut={mouseHover}
         />
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
