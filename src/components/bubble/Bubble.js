@@ -43,13 +43,13 @@ function Bubble() {
         <span className="line"></span>
       </div>
       <BubbleItem>
-        <Link to="/">Home</Link>
+        <Link to="/" onClick={handleClick}>Home</Link>
       </BubbleItem>
       <BubbleItem>
-        <Link to="/obras">Técnicas</Link>
+        <Link to="/obras" onClick={handleClick}>Técnicas</Link>
       </BubbleItem>
       <BubbleItem>
-        <Link to="/sobre">Sobre</Link>
+        <Link to="/sobre" onClick={handleClick}>Sobre</Link>
       </BubbleItem>
       {/* <BubbleItem></BubbleItem> */}
     </div>
