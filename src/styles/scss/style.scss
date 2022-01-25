@@ -221,7 +221,7 @@ footer {
 
 /// FILTRO
 
-.container-fluid{
+.container-fluid {
   display: flex;
   z-index: 2;
   position: fixed;
@@ -239,8 +239,8 @@ footer {
   border-radius: $border-radius;
   cursor: pointer;
   height: fit-content;
-  
-  &-content{
+
+  &-content {
     display: flex;
     border-radius: $border-radius;
     background-color: lighten($color-dark, 70%);
@@ -248,8 +248,12 @@ footer {
   }
 }
 
-
 /// BUBBLE
+
+#bubble-drag{
+  margin-left: 280px;
+  margin-top: 25px;
+}
 
 .bubble {
   position: fixed;
@@ -343,7 +347,7 @@ footer {
   font-weight: bold;
 }
 
-.subtitulo-centralizado{
+.subtitulo-centralizado {
   text-align: center;
   font-size: 1em;
 }
