@@ -17,6 +17,7 @@ function Filtro() {
 
     if (scrollPos[0] > scrollPos[1]) {
       setIsHide(true);
+      setIsOpen(false);
     } else if (scrollPos[0] < scrollPos[1]) {
       setIsHide(false);
     }
@@ -31,7 +32,7 @@ function Filtro() {
 
   return (
     <div className="container-fluid p-1">
-      {isOpen && (
+      {isOpen && isHide && (
         <div className="filtro-content p-1">
           <FiltroItem titulo="Estilos" obj={estilos} />
           <FiltroItem titulo="Cores" obj={cores} />
