@@ -3,95 +3,34 @@ import React from "react";
 import Banner from "../components/banner/Banner";
 import Carrossel from "../components/carrossel/Carrossel";
 import CarrosselItem from "../components/carrossel/CarrosselItem";
+import CardObra from "../components/cardObra/CardObra";
 
-const itens = [
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-  {
-    titulo: "Título 1",
-    imagem: "https://picsum.photos/200/300",
-  },
-];
+import db from "../serv/db.json";
 
 function HomePage() {
+  const obras = db.obras;
   return (
     <div>
       <Banner />
       <Carrossel titulo="Mais curtidos">
-        {itens.map((item, index) => (
-          <CarrosselItem key={index} {...item} />
+        {obras.map((obra, index) => (
+          <CarrosselItem key={index}>
+            <CardObra obra={obra} />
+          </CarrosselItem>
         ))}
       </Carrossel>
       <Carrossel titulo="Mais vendidos">
-        {itens.map((item, index) => (
-          <CarrosselItem key={index} {...item} />
+        {obras.map((obra, index) => (
+          <CarrosselItem key={index}>
+            <CardObra obra={obra} />
+          </CarrosselItem>
         ))}
       </Carrossel>
       <Carrossel titulo="Categorias">
-        {itens.map((item, index) => (
-          <CarrosselItem key={index} {...item} />
+        {obras.map((obra, index) => (
+          <CarrosselItem key={index}>
+            <CardObra obra={obra} />
+          </CarrosselItem>
         ))}
       </Carrossel>
     </div>

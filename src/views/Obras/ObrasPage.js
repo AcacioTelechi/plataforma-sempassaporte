@@ -23,7 +23,7 @@ function ObrasPage() {
       </div>
       <div className="cardContainer">
         {obras.map((obra) => (
-          <CardObra nome={obra.nome} img={obra.img} />
+          <CardObra nome={obra.nome} img={obra.img} dados={obra} />
         ))}
       </div>
     </div>

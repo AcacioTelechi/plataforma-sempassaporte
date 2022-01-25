@@ -76,7 +76,7 @@ function ArtistaPage() {
         ) : (
           <div className="cardContainer">
             {obras.map((obra) => (
-              <CardObra nome={obra.titulo} img={obra.img} />
+              <CardObra nome={obra.titulo} img={obra.img} obra={obra}/>
             ))}
           </div>
         )}

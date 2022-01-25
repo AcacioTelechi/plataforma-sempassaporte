@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const styles = {
   card: {
@@ -28,14 +29,14 @@ const styles = {
     objectFit: "cover",
     borderRadius: "16px",
     filter: "brightness(0.5)",
-    },
+  },
 };
 
 function CardObra(props) {
-  const [imgUrl, setImgUrl] = useState(props.img);
+  const { autorId, id, img } = props.obra;
+  const [imgUrl, setImgUrl] = useState(img);
   const [imgSize, setImgSize] = useState("s");
   const [hover, setHover] = useState(false);
-
 
   useEffect(() => {
     defSize(imgUrl);
@@ -63,20 +64,22 @@ function CardObra(props) {
   }
 
   return (
-    <div
-      style={{
-        ...styles.card,
-        ...styles[imgSize],
-      }}
-    >
-      <img
-        src={imgUrl}
-        alt={props.nome}
-        style={hover ? styles.imgHover : styles.img}
-        onMouseEnter={mouseHover}
-        onMouseOut={mouseHover}
-      />
-    </div>
+    <Link to={`/obra/${id}`}>
+      <div
+        style={{
+          ...styles.card,
+          ...styles[imgSize],
+        }}
+      >
+        <img
+          src={imgUrl}
+          alt={props.nome}
+          style={hover ? styles.imgHover : styles.img}
+          onMouseEnter={mouseHover}
+          onMouseOut={mouseHover}
+        />
+      </div>
+    </Link>
   );
 }
 
