@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import SeguirButton from "./SeguirButton";
+import SeguirButton from "../botoes/SeguirButton";
 
 function MiniCardPerfil(props) {
   const { perfil } = props;
