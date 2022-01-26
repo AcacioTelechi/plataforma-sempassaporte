@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import MiniCardPerfil from "../../components/perfil/MiniCardPerfil";
+import CompartilharButton from "../../components/botoes/CompartilharButton";
+import AmeiButton from "../../components/botoes/AmeiButton";
+import AddCartButton from "../../components/botoes/AddCartButton";
 
 import db from "../../serv/db.json";
 
@@ -27,7 +30,6 @@ function ObraPage(props) {
     const artista = db.artistas.find((artista) => artista.id === obra.autorId);
     setArtista(artista);
     setIsLoadedArtista(true);
-    console.log({ artista });
   }
 
   if (!isLoaded) {
@@ -38,10 +40,21 @@ function ObraPage(props) {
         <div className="col-2 p-1">
           <img src={obra.img} alt={obra.titulo} />
         </div>
-        <div className="col-2 p-1">
-          <h1>{obra.titulo}</h1>
-          {isLoadedArtista && <MiniCardPerfil perfil={artista} />}
-          <p className="py-2">{obra.descricao}</p>
+        <div className="col-2 p-1 container-space-between column">
+          <div>
+            <h1>{obra.titulo}</h1>
+            {isLoadedArtista && <MiniCardPerfil perfil={artista} />}
+            <p className="text-secondary py-2">{obra.descricao}</p>
+            <p className="text-secondary">Técnica: Pintura em tinta óleo</p>
+            <p className="text-secondary">
+              Dimensões: {obra.tamanhoX}cm x {obra.tamanhoY}cm
+            </p>
+          </div>
+          <div className="container-felx-start">
+            <AmeiButton />
+            <CompartilharButton />
+            <AddCartButton />
+          </div>
         </div>
       </div>
     );
