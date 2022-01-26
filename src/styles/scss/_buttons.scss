@@ -11,7 +11,7 @@
 @mixin btn-variant-1($background) {
   @extend %btn;
   @include set-background($background);
-  a::after {
+  ::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -23,8 +23,8 @@
     transition: opacity 300ms, transform 300ms;
   }
 
-  a:hover::after,
-  a:focus::after {
+  :hover::after,
+  :focus::after {
     opacity: 1;
     transform: translate3d(0, 0.1em, 0);
   }

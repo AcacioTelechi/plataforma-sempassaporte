@@ -135,7 +135,7 @@ footer {
   @include container();
 }
 
-.container-flex{
+.container-flex {
   @include container();
   display: -webkit-box;
   flex-direction: column;
@@ -152,7 +152,6 @@ footer {
     text-align: left;
   }
 }
-
 
 .cardContainer {
   margin: 0;
@@ -269,7 +268,7 @@ footer {
 
 /// BUBBLE
 
-#bubble-drag{
+#bubble-drag {
   margin-left: 280px;
   margin-top: 25px;
 }
@@ -369,4 +368,23 @@ footer {
 .subtitulo-centralizado {
   text-align: center;
   font-size: 1em;
+  font-weight: bold;
+}
+
+// PERFIL
+
+.avatar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    align-self: center;
+  }
+}
+
+.seguir-btn {
+  @include btn-variant-2($color-red);
 }

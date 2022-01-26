@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import CardObra from "../components/cardObra/CardObra.js";
+import Avatar from "../components/perfil/Avatar.js";
+import SeguirButton from "../components/perfil/SeguirButton.js";
 
 import db from "../serv/db.json";
 
@@ -53,12 +55,13 @@ function ArtistaPage() {
 
     return (
       <div className="container">
+        <Avatar src={artista.fotoPerfil} alt={artista.nome} />
         <div className="titulo-centralizado">
           {nome} {sobrenome}
         </div>
-        <div className="subtitulo-centralizado">Seguidores: {seguidores}</div>
         <div className="subtitulo-centralizado">
-          {nacionalidade} / {estado}
+          {seguidores}  seguidores
+          <SeguirButton />
         </div>
         <h1>Estilos</h1>
         <ul>
@@ -76,7 +79,7 @@ function ArtistaPage() {
         ) : (
           <div className="cardContainer">
             {obras.map((obra) => (
-              <CardObra obra={obra}/>
+              <CardObra obra={obra} />
             ))}
           </div>
         )}
