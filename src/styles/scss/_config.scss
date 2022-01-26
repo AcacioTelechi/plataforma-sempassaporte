@@ -16,6 +16,7 @@ $color-warning: #ff9800;
 $color-info: #2196f3;
 $color-light: #fafafa;
 $color-dark: #333;
+$color-grey: lighten($color-dark, 20%);
 
 
 // definir cor do texto com base na cor do fundo
