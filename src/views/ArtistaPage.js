@@ -5,6 +5,9 @@ import CardObra from "../components/cardObra/CardObra.js";
 import Avatar from "../components/perfil/Avatar.js";
 import SeguirButton from "../components/perfil/SeguirButton.js";
 
+import Stack from "@mui/material/Stack";
+import Chip from "@mui/material/Chip";
+
 import db from "../serv/db.json";
 
 function ArtistaPage() {
@@ -40,7 +43,7 @@ function ArtistaPage() {
   }
 
   if (!isArtistaLoaded) {
-    return <h1>Carregando...</h1>;
+    return <h2>Carregando...</h2>;
   } else {
     const {
       nome,
@@ -60,29 +63,35 @@ function ArtistaPage() {
           {nome} {sobrenome}
         </div>
         <div className="subtitulo-centralizado">
-          {seguidores}  seguidores
+          {seguidores} seguidores
           <SeguirButton />
         </div>
-        <h1>Estilos</h1>
-        <ul>
+        <h2>Estilos</h2>
+        <Stack direction="row" spacing={1}>
           {estilos.map((estilo, index) => (
-            <li key={index}>{estilo}</li>
+            <Chip key={index} label={estilo} variant="outlined" />
           ))}
-        </ul>
-        <h1> Sobre </h1>
-        <p>{sobre}</p>
-        <h1> Poética </h1>
-        <p>{poetica}</p>
-        <h1> Obras </h1>
-        {!isObrasLoaded ? (
-          <h1>Carregando...</h1>
-        ) : (
-          <div className="cardContainer">
-            {obras.map((obra) => (
-              <CardObra obra={obra} />
-            ))}
-          </div>
-        )}
+        </Stack>
+        <div className="my-2">
+          <h2> Sobre </h2>
+          <p>{sobre}</p>
+        </div>
+        <div className="my-2">
+          <h2> Poética </h2>
+          <p>{poetica}</p>
+        </div>
+        <div className="my-2">
+          <h2> Obras </h2>
+          {!isObrasLoaded ? (
+            <h2>Carregando...</h2>
+          ) : (
+            <div className="cardContainer">
+              {obras.map((obra) => (
+                <CardObra obra={obra} />
+              ))}
+            </div>
+           )}
+        </div>
       </div>
     );
   }
