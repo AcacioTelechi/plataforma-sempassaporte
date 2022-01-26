@@ -55,6 +55,10 @@
     @include btn-variant-2($color-grey);
   }
 
+  &.vermelho{
+    @include btn-variant-2($color-red);
+  }
+
   &.disabled {
     opacity: 0.5;
   }
