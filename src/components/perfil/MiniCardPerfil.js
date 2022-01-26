@@ -6,7 +6,6 @@ import SeguirButton from "./SeguirButton";
 function MiniCardPerfil(props) {
   const { perfil } = props;
 
-  console.log({ perfil });
   return (
     <div className="minicard-perfil my-2">
       <div className="foto-perfil">
