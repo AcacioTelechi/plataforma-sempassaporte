@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import MiniCardPerfil from "../../components/perfil/MiniCardPerfil";
+
 import db from "../../serv/db.json";
 
 function ObraPage(props) {
@@ -25,6 +27,7 @@ function ObraPage(props) {
     const artista = db.artistas.find((artista) => artista.id === obra.autorId);
     setArtista(artista);
     setIsLoadedArtista(true);
+    console.log({ artista });
   }
 
   if (!isLoaded) {
@@ -37,13 +40,7 @@ function ObraPage(props) {
         </div>
         <div className="col-2 p-1">
           <h1>{obra.titulo}</h1>
-          {isLoadedArtista && (
-            <h3 >
-              <Link to={`/artista/${artista.id}`}>
-                {artista.nome} {artista.sobrenome}
-              </Link>
-            </h3>
-          )}
+          {isLoadedArtista && <MiniCardPerfil perfil={artista} />}
           <p className="py-2">{obra.descricao}</p>
         </div>
       </div>
