@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import CardObra from "../components/cardObra/CardObra.js";
 import Avatar from "../components/perfil/Avatar.js";
-import SeguirButton from "../components/perfil/SeguirButton.js";
+import SeguirButton from "../components/botoes/SeguirButton.js";
 
 import Stack from "@mui/material/Stack";
 import Chip from "@mui/material/Chip";
