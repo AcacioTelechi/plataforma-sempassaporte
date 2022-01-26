@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import FiltroItem from "./FiltroItem";
+import FiltroItens from "./FiltroItens";
 
 import estilos from "../../../utils/estilos.json";
 import cores from "../../../utils/cores.json";
@@ -34,8 +34,8 @@ function Filtro() {
     <div className="container-fluid p-1">
       {isOpen && !  isHide && (
         <div className="filtro-content p-1">
-          <FiltroItem titulo="Estilos" obj={estilos} />
-          <FiltroItem titulo="Cores" obj={cores} />
+          <FiltroItens titulo="Estilos" obj={estilos} />
+          <FiltroItens titulo="Cores" obj={cores} />
         </div>
       )}
       <button
