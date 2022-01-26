@@ -78,11 +78,11 @@ footer {
   }
 
   .btn-entrar {
-    @include btn-variant-2($color-secondary);
+    @include btn-variant-2($color-light);
   }
 
   .btn-criarConta {
-    @include btn-variant-2($color-light);
+    @include btn-variant-2($color-secondary);
     margin-right: 24px;
   }
 
