@@ -16,10 +16,10 @@ function Filtro() {
     window.addEventListener("scroll", listenToScroll);
 
     if (scrollPos[0] > scrollPos[1]) {
-      setIsHide(true);
-      setIsOpen(false);
-    } else if (scrollPos[0] < scrollPos[1]) {
       setIsHide(false);
+    } else if (scrollPos[0] < scrollPos[1]) {
+      setIsHide(true);
+      // setIsOpen(false);
     }
     return () => window.removeEventListener("scroll", listenToScroll);
   }, [scrollPos]);
@@ -32,21 +32,22 @@ function Filtro() {
 
   return (
     <div className="container-fluid p-1">
-      {isOpen && isHide && (
+      {isOpen && !  isHide && (
         <div className="filtro-content p-1">
           <FiltroItem titulo="Estilos" obj={estilos} />
           <FiltroItem titulo="Cores" obj={cores} />
         </div>
       )}
-      <div
-        className="filtro px-1"
+      <button
+        className="btn vermelho"
         onClick={() => setIsOpen(!isOpen)}
         style={{
-          display: isHide ? "block" : "none",
+          display: isHide ? "none" : "block",
+          margin: 0,
         }}
       >
         Filtro
-      </div>
+      </button>
     </div>
   );
 }

@@ -18,7 +18,6 @@ function ObrasPage() {
   return (
     <div>
       <div className="filtros" style={{"height": '80px'}}>
-        FILTROS
         <Filtro />
       </div>
       <div className="cardContainer">
