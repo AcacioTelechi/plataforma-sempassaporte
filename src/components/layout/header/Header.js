@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import Bubble from "../../bubble/Bubble";
+import HeaderButtons from "./HeaderButtons";
 
 import "../../../styles/css/style.css";
 
@@ -12,22 +13,18 @@ function Header() {
   const authState = useSelector((state) => state.auth);
 
   function handleLogin() {
-    if (authState.isAuthenticated) {
-      dispatch({ type: "LOGOUT" });
-    } else {
-      dispatch({
-        type: "LOGIN_REQUEST",
-      });
-      const user = getUser()
-      dispatch({
-        type: "LOGIN_SUCCESS",
-        payload: user,
-      });
-    }
+    dispatch({
+      type: "LOGIN_REQUEST",
+    });
+    const user = getUser();
+    dispatch({
+      type: "LOGIN_SUCCESS",
+      payload: user,
+    });
   }
 
-  function getUser(){
-    return db.artistas[0]
+  function getUser() {
+    return db.artistas[0];
   }
 
   return (
@@ -41,14 +38,15 @@ function Header() {
         </div>
         <div className="App-header-btns">
           {authState.isAuthenticated ? (
-            <button onClick={handleLogin}>Sair</button>
+            <HeaderButtons />
           ) : (
-            <button className="btn-entrar" onClick={handleLogin}>
-              Entrar
-            </button>
+            <>
+              <button className="btn-entrar" onClick={handleLogin}>
+                Entrar
+              </button>
+              <button className="btn-criarConta">Criar conta</button>
+            </>
           )}
-
-          <button className="btn-criarConta">Criar conta</button>
         </div>
       </header>
     </div>

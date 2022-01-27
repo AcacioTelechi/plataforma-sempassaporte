@@ -71,6 +71,13 @@ footer {
     display: flex;
   }
 
+  &-btns{
+    grid-gap: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+  }
+
   .logo {
     width: $sidebar-width;
     height: 100%;
@@ -79,11 +86,13 @@ footer {
 
   .btn-entrar {
     @include btn-variant-2($color-light);
+    margin: 0;
   }
 
   .btn-criarConta {
     @include btn-variant-2($color-secondary);
-    margin-right: 24px;
+    
+    margin-left: 0;
   }
 
   .sidebar-toggle {
