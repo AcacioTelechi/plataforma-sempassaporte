@@ -2,7 +2,7 @@
   "artistas": [
     {
       "id": "1000001",
-      "perfil": "a",
+      "tipoUsuario": "a",
       "nome": "Tarsila",
       "sobrenome": "do Amaral",
       "dataNascimento": "01/01/2000",
@@ -37,7 +37,7 @@
     },
     {
       "id": "1000002",
-      "perfil": "a",
+      "tipoUsuario": "a",
       "nome": "Maria",
       "sobrenome": "Xiquinha",
       "dataNascimento": "01/01/2000",
@@ -299,7 +299,7 @@
   "usuarios": [
     {
       "id": "2000001",
-      "perfil": "cliente",
+      "tipoUsuario": "cliente",
       "nomeUsuario": "Joao24645",
       "fotoPerfil": "https://i.pravatar.cc/300",
       "dadosPlataforma": {
@@ -309,7 +309,7 @@
     },
     {
       "id": "2000001",
-      "perfil": "cliente",
+      "tipoUsuario": "cliente",
       "nomeUsuario": "Joao24645",
       "fotoPerfil": "https://i.pravatar.cc/300",
       "dadosPlataforma": {
@@ -319,7 +319,7 @@
     },
     {
       "id": "2000001",
-      "perfil": "cliente",
+      "tipoUsuario": "cliente",
       "nomeUsuario": "Joao24645",
       "fotoPerfil": "https://i.pravatar.cc/300",
       "dadosPlataforma": {
@@ -329,7 +329,7 @@
     },
     {
       "id": "2000001",
-      "perfil": "cliente",
+      "tipoUsuario": "cliente",
       "nomeUsuario": "Joao24645",
       "fotoPerfil": "https://i.pravatar.cc/300",
       "dadosPlataforma": {
@@ -339,7 +339,7 @@
     },
     {
       "id": "2000001",
-      "perfil": "cliente",
+      "tipoUsuario": "cliente",
       "nomeUsuario": "Joao24645",
       "fotoPerfil": "https://i.pravatar.cc/300",
       "dadosPlataforma": {
