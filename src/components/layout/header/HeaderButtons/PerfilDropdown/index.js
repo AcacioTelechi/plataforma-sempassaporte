@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import Box from "@mui/material/Box";
@@ -18,12 +19,14 @@ export default function PerfilDropDown() {
   }
 
   return (
-    <Box sx={{ width: 240, bgcolor: "background.paper", borderRadius: "16px"}}>
+    <Box sx={{ width: 240, bgcolor: "background.paper", borderRadius: "16px" }}>
       <nav aria-label="main mailbox folders">
         <List>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="/meu-perfil">
-              <ListItemText primary=" Meu perfil" />
+            <ListItemButton>
+              <Link to="/meu-perfil" style={{ width: "100%" }}>
+                <ListItemText primary="Meu perfil" />
+              </Link>
             </ListItemButton>
           </ListItem>
           <Divider />
