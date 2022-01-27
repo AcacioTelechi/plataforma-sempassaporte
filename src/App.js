@@ -8,6 +8,7 @@ import ObrasPage from "./views/Obras/ObrasPage";
 import ObraPage from "./views/Obras/ObraPage";
 import ArtistaPage from "./views/ArtistaPage";
 import SobrePage from "./views/SobrePage";
+import MeuPerfil from "./views/MeuPerfil";
 
 const routes = [
   { path: "/", element: <HomePage />, access: "public" },
@@ -16,6 +17,7 @@ const routes = [
   { path: "/obra/:id", element: <ObraPage />, access: "public" },
   { path: "/artista/:id", element: <ArtistaPage />, access: "public" },
   { path: "/sobre", element: <SobrePage />, access: "public" },
+  { path: "/meu-perfil", element: <MeuPerfil />, access: "private" },
 ];
 
 function App() {
