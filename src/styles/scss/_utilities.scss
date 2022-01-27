@@ -3,13 +3,6 @@
   padding: 8px;
 }
 
-@mixin container() {
-  max-width: 1100px;
-  padding: 0 30px;
-  margin: 20px auto;
-  overflow: auto;
-}
-
 .text {
   &-secondary {
     color: lighten($color-dark, 20%);
@@ -23,6 +16,14 @@
 }
 
 // CONTAINERS
+
+@mixin container() {
+  max-width: 1100px;
+  padding: 0 30px;
+  margin: 20px auto;
+  overflow: auto;
+}
+
 .container {
   @include container();
 }

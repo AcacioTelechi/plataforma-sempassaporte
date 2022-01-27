@@ -8,7 +8,7 @@ import AddCartButton from "../../components/botoes/AddCartButton";
 import Preco from "../../components/preco/Preco";
 
 import db from "../../serv/db.json";
-
+import ComentariosBox from "../../components/comentarios/ComentariosBox";
 
 function ObraPage(props) {
   const { id } = useParams();
@@ -38,27 +38,32 @@ function ObraPage(props) {
     return <div>Cargando...</div>;
   } else {
     return (
-      <div className="container-flex">
-        <div className="col-2 p-1">
-          <img src={obra.img} alt={obra.titulo} />
-        </div>
-        <div className="col-2 p-1 container-space-between column">
-          <div>
-            <h1>{obra.titulo}</h1>
-            {isLoadedArtista && <MiniCardPerfil perfil={artista} />}
-            <p className="text-secondary py-2">{obra.descricao}</p>
-            <p className="text-secondary">Técnica: Pintura em tinta óleo</p>
-            <p className="text-secondary">
-              Dimensões: {obra.tamanhoX}cm x {obra.tamanhoY}cm
-            </p>
-            <Preco obra={obra} />
-            <div className="container-felx-start my-2">
-              <AmeiButton />
-              <CompartilharButton />
-              <AddCartButton />
+      <div>
+        <div className="container-flex">
+          <div className="col-2 p-1">
+            <img src={obra.img} alt={obra.titulo} />
+          </div>
+          <div className="col-2 p-1 container-space-between column">
+            <div>
+              <h1>{obra.titulo}</h1>
+              {isLoadedArtista && <MiniCardPerfil perfil={artista} />}
+              <p className="text-secondary py-2">{obra.descricao}</p>
+              <p className="text-secondary">Técnica: Pintura em tinta óleo</p>
+              <p className="text-secondary">
+                Dimensões: {obra.tamanhoX}cm x {obra.tamanhoY}cm
+              </p>
+              <Preco obra={obra} />
+              <div className="container-felx-start my-2">
+                <AmeiButton />
+                <CompartilharButton />
+                <AddCartButton />
+              </div>
             </div>
           </div>
-          <div className="container-felx-start">Comentários</div>
+        </div>
+        <div className="container">
+          <h4>Comentarios</h4>
+          <ComentariosBox obraId={obra.id}/>
         </div>
       </div>
     );
