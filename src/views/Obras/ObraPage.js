@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import MiniCardPerfil from "../../components/perfil/MiniCardPerfil";
 import CompartilharButton from "../../components/botoes/CompartilharButton";
 import AmeiButton from "../../components/botoes/AmeiButton";
 import AddCartButton from "../../components/botoes/AddCartButton";
+import Preco from "../../components/preco/Preco";
 
 import db from "../../serv/db.json";
+
 
 function ObraPage(props) {
   const { id } = useParams();
@@ -49,12 +51,14 @@ function ObraPage(props) {
             <p className="text-secondary">
               Dimensões: {obra.tamanhoX}cm x {obra.tamanhoY}cm
             </p>
+            <Preco obra={obra} />
+            <div className="container-felx-start my-2">
+              <AmeiButton />
+              <CompartilharButton />
+              <AddCartButton />
+            </div>
           </div>
-          <div className="container-felx-start">
-            <AmeiButton />
-            <CompartilharButton />
-            <AddCartButton />
-          </div>
+          <div className="container-felx-start">Comentários</div>
         </div>
       </div>
     );
