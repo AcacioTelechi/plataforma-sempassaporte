@@ -32,12 +32,6 @@ function Filtro() {
 
   return (
     <div className="container-fluid p-1">
-      {isOpen && !  isHide && (
-        <div className="filtro-content p-1">
-          <FiltroItens titulo="Estilos" obj={estilos} />
-          <FiltroItens titulo="Cores" obj={cores} />
-        </div>
-      )}
       <button
         className="btn vermelho"
         onClick={() => setIsOpen(!isOpen)}
@@ -48,6 +42,13 @@ function Filtro() {
       >
         Filtro
       </button>
+      {isOpen && !  isHide && (
+        <div className="filtro-content p-1">
+          <FiltroItens titulo="Estilos" obj={estilos} />
+          <FiltroItens titulo="Cores" obj={cores} />
+        </div>
+      )}
+      
     </div>
   );
 }
