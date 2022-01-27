@@ -24,7 +24,7 @@ function Header() {
   }
 
   function getUser() {
-    return db.artistas[0];
+    return db.usuarios[0];
   }
 
   return (
