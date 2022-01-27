@@ -30,7 +30,6 @@ function Header() {
     return db.artistas[0]
   }
 
-  console.log(authState);
   return (
     <div className="App-header">
       <header>
