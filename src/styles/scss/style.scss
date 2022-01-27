@@ -55,7 +55,7 @@ footer {
   background-color: $color-light;
   align-items: center;
   overflow: auto;
-  z-index: 1;
+  // z-index: 1;
 
   header {
     height: $header-height;
@@ -219,7 +219,7 @@ footer {
 
 .container-fluid {
   display: flex;
-  z-index: 2;
+  z-index: 1;
   position: fixed;
   top: $header-height;
   left: 0;
@@ -253,7 +253,7 @@ footer {
 
 .bubble {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
 }
 
 .bubble .hamburger {
