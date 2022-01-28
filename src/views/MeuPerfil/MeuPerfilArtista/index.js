@@ -11,7 +11,7 @@ import Chip from "@mui/material/Chip";
 import db from "../../../serv/db.json";
 
 function MeuPerfilArtista() {
-  const {id} = useSelector((state) => state.auth.user);
+  const {id} = useSelector((state) => state.user);
   const [artista, setArtista] = useState([]);
   const [isArtistaLoaded, setIsArtistaLoaded] = useState(false);
   const [obras, setObras] = useState([]);

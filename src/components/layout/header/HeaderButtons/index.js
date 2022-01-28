@@ -9,7 +9,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import "../../../../styles/css/style.css";
 
 function HeaderButtons() {
-  const { user } = useSelector((state) => state.auth);
+  const  user  = useSelector((state) => state.user);
 
   return (
     <>

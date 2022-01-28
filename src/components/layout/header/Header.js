@@ -11,6 +11,8 @@ import db from "../../../serv/db";
 function Header() {
   const dispatch = useDispatch();
   const authState = useSelector((state) => state.auth);
+  const state = useSelector((state) => state);
+  console.log(state);
 
   function handleLogin() {
     dispatch({
@@ -19,6 +21,9 @@ function Header() {
     const user = getUser();
     dispatch({
       type: "LOGIN_SUCCESS",
+    });
+    dispatch({
+      type: "SET_USER",
       payload: user,
     });
   }
