@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
+import PerfilMainCard from "./PerfilMainCard.js";
 import CardObra from "../../../components/cardObra/CardObra.js";
 import Avatar from "../../../components/perfil/Avatar.js";
 import SeguirButton from "../../../components/botoes/SeguirButton.js";
@@ -58,20 +59,15 @@ function MeuPerfilArtista() {
 
     return (
       <div className="container">
-        <Avatar src={artista.fotoPerfil} alt={artista.nome} />
-        <div className="titulo-centralizado">
-          {nome} {sobrenome}
-        </div>
-        <div className="subtitulo-centralizado">
-          {seguidores} seguidores
-          <SeguirButton />
-        </div>
+        <PerfilMainCard />
+        <div className="my-2">
         <h2>Estilos</h2>
         <Stack direction="row" spacing={1}>
           {estilos.map((estilo, index) => (
             <Chip key={index} label={estilo} variant="outlined" />
           ))}
         </Stack>
+        </div>
         <div className="my-2">
           <h2> Sobre </h2>
           <p>{sobre}</p>
