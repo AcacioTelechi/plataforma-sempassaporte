@@ -1,6 +1,6 @@
 {
     "identityPoolName": "platfsempassaportea3cccf5f_identitypool_a3cccf5f",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "platfsa3cccf5f",
     "userPoolName": "platfsempassaportea3cccf5f_userpool_a3cccf5f",
     "autoVerifiedAttributes": [

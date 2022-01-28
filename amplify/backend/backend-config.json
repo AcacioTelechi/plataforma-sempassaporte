@@ -23,5 +23,11 @@
         }
       }
     }
+  },
+  "storage": {
+    "s3platafSemPassaporte": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
