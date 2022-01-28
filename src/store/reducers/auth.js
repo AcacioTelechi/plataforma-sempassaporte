@@ -2,7 +2,6 @@ const INITIAL_STATE = {
   isAuthenticated: false,
   isLoading: false,
   error: null,
-  user: {},
 };
 
 function auth(state = INITIAL_STATE, action) {
@@ -18,7 +17,6 @@ function auth(state = INITIAL_STATE, action) {
             ...state,
             isAuthenticated: true,
             isLoading: false,
-            user: action.payload,
         };
     } case "LOGIN_FAILURE": {
         return {
@@ -32,7 +30,6 @@ function auth(state = INITIAL_STATE, action) {
             ...state,
             isAuthenticated: false,
             isLoading: false,
-            user: {},
         };
     }
     default:

@@ -5,9 +5,10 @@ import MeuPerfilArtista from "./MeuPerfilArtista";
 import MeuPerfilUsuario from "./MeuPerfilUsuario";
 
 function MeuPerfil() {
-  const { tipoUsuario } = useSelector((state) => state.auth.user);
+  const { tipoUsuario } = useSelector((state) => state.user);
+  const { isAuthenticated } = useSelector((state) => state.auth);
 
-  if (tipoUsuario) {
+  if (isAuthenticated) {
     if (tipoUsuario === "a") {
       return <MeuPerfilArtista />;
     } else {
